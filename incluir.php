@@ -7,6 +7,7 @@ if (!isset($_SESSION)) {
 
 $erro = [];
 
+<<<<<<< HEAD
 $custo = $_POST['custo'];
 
 if (!is_numeric($custo)) {
@@ -18,6 +19,8 @@ if ($custo > 9999999999999.99) {
 }
 
 
+=======
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
 if (isset($_POST['confirmar'])) {
 
     // guardar dados na sessão
@@ -91,7 +94,11 @@ if (count($erro) > 0) {
 <form method="POST">
 
     <label>Nome da tarefa</label><br>
+<<<<<<< HEAD
     <input name="nome" type="text" autofocus required
+=======
+    <input name="nome" type="text" required
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
            value="<?= isset($_SESSION['nome']) ? $_SESSION['nome'] : '' ?>">
     <br><br>
 

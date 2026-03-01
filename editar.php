@@ -7,6 +7,7 @@ if (!isset($_SESSION)) {
 
 $erro = [];
 
+<<<<<<< HEAD
 $custo = $_POST['custo'];
 
 if (!is_numeric($custo)) {
@@ -18,6 +19,8 @@ if ($custo > 9999999999999.99) {
 }
 
 
+=======
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
 if (!isset($_GET['id'])) {
     echo "Tarefa não encontrada.";
     exit;
@@ -55,7 +58,11 @@ if (isset($_POST['confirmar'])) {
 
     // verficar nomes duplicadoss
     $nome = $_SESSION['nome'];
+<<<<<<< HEAD
     $sql_nome = "SELECT id FROM tarefas WHERE nome = '$nome'AND id != $id";
+=======
+    $sql_nome = "SELECT id FROM tarefas WHERE nome = '$nome'";
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
     $consulta = $mysqli->query($sql_nome);
 
     if ($consulta->num_rows > 0) {
@@ -104,18 +111,31 @@ if (count($erro) > 0) {
 <form method="POST">
 
     <label>Nome da tarefa</label><br>
+<<<<<<< HEAD
     <input name="nome" type="text" autofocus required
            value="<?= isset($_SESSION['nome']) ? $_SESSION['nome'] : $tarefa['nome'] ?>">
+=======
+    <input name="nome" type="text" required
+           value="<?= isset($_SESSION['nome']) ? $_SESSION['nome'] : '' ?>">
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
     <br><br>
 
     <label>Custo (R$)</label><br>
     <input name="custo" type="number" step="0.01" min="0" required
+<<<<<<< HEAD
            value="<?= isset($_SESSION['custo']) ? $_SESSION['custo'] : $tarefa['custo'] ?>">
+=======
+           value="<?= isset($_SESSION['custo']) ? $_SESSION['custo'] : '' ?>">
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
     <br><br>
 
     <label>Data limite</label><br>
     <input name="data" type="date" required
+<<<<<<< HEAD
            value="<?= isset($_SESSION['data']) ? $_SESSION['data'] : $tarefa['data'] ?>">
+=======
+           value="<?= isset($_SESSION['data']) ? $_SESSION['data'] : '' ?>">
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
     <br><br>
 
     <input type="submit" name="confirmar" value="Salvar">

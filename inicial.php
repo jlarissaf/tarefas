@@ -16,7 +16,10 @@ $sql_query = $mysqli->query($sql_select) or die($mysqli->error);
 <table border="1">
     <thead>
         <tr>
+<<<<<<< HEAD
             <td>ID</td>
+=======
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
             <td>Ordem</td>
             <td>Nome</td>
             <td>Custo</td>
@@ -30,7 +33,10 @@ $sql_query = $mysqli->query($sql_select) or die($mysqli->error);
         <tr draggable="true" data-id="<?= $linha['id'] ?>"
             class="<?= ($linha['custo'] > 1000) ? 'destaque' : '' ?>">
 
+<<<<<<< HEAD
             <td><?= $linha['id'] ?></td>
+=======
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
             <td><?= $linha['ordem_apresentacao'] ?></td>
             <td><?= $linha['nome'] ?></td>
             <td>R$ <?= number_format($linha['custo'], 2, ',', '.') ?></td>
@@ -39,9 +45,13 @@ $sql_query = $mysqli->query($sql_select) or die($mysqli->error);
                 <a href="subir.php?id=<?= $linha['id'] ?>">🔼</a>
                 <a href="descer.php?id=<?= $linha['id'] ?>">🔽</a>
                 <a href="editar.php?id=<?= $linha['id'] ?>">Editar</a>
+<<<<<<< HEAD
                 <a href="excluir.php?id=<?= $linha['id'] ?>"
                 onclick="return confirm('Tem certeza que deseja excluir esta tarefa?')"> Excluir
                </a>
+=======
+                <a href="excluir.php?id=<?= $linha['id'] ?>">Excluir</a>
+>>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
             </td>
         </tr>
         <?php endwhile; ?>
