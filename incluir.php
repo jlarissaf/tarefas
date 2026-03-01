@@ -10,9 +10,6 @@ $erro = [];
 <<<<<<< HEAD
 $custo = $_POST['custo'];
 
-if (!is_numeric($custo)) {
-    $erro[] = "Custo inválido.";
-}
 
 if ($custo > 9999999999999.99) {
     $erro[] = "Valor máximo permitido é 9.999.999.999.999,99";
