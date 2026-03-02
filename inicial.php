@@ -1,9 +1,11 @@
 <?php
 require_once "conexao.php";
 
+$total = 0;
 $sql_select = "SELECT * FROM tarefas ORDER BY ordem_apresentacao";
 $sql_query = $mysqli->query($sql_select) or die($mysqli->error);
 ?>
+
 
 <style>
 .destaque {
@@ -30,6 +32,8 @@ $sql_query = $mysqli->query($sql_select) or die($mysqli->error);
 
     <tbody id="lista-tarefas">
         <?php while ($linha = $sql_query->fetch_assoc()): ?>
+        <?php $total += $linha['custo']; ?>
+
         <tr draggable="true" data-id="<?= $linha['id'] ?>"
             class="<?= ($linha['custo'] > 1000) ? 'destaque' : '' ?>">
 
@@ -56,6 +60,15 @@ $sql_query = $mysqli->query($sql_select) or die($mysqli->error);
         </tr>
         <?php endwhile; ?>
     </tbody>
+    <br>
+    <tfoot>
+    <tr>
+        <td colspan="3"><strong>Soma total</strong></td>
+        <td><strong>R$ <?= number_format($total, 2, ',', '.') ?></strong></td>
+        <td colspan="2"></td>
+    </tr>
+    </tfoot>
+
 </table>
 
 

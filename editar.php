@@ -129,7 +129,7 @@ if (count($erro) > 0) {
     <label>Data limite</label><br>
     <input name="data" type="date" required
 <<<<<<< HEAD
-           value="<?= isset($_SESSION['data']) ? $_SESSION['data'] : $tarefa['data'] ?>">
+           value="<?= isset($_SESSION['data']) ? $_SESSION['data'] : $tarefa['datalimite'] ?>">
 =======
            value="<?= isset($_SESSION['data']) ? $_SESSION['data'] : '' ?>">
 >>>>>>> e70c7a20778fc573c88092fe3caf910ceaf99da1
