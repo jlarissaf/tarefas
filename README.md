@@ -88,7 +88,7 @@ http://localhost/sistema
 ## Autor
 
 Projeto desenvolvido por **Larissa Julie**
-Estudante do curso técnico em Informática para Internet – IFG.
+Estudante de Engenharia de Redes de Comunicação - Universidade de Brasília
 
 ## Observações
 
